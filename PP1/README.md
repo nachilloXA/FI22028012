@@ -1,4 +1,4 @@
-# Práctica Supervisada 1 — Inverso de un número
+# Práctica Programada 1 — Inverso de un número
 
 **Nombre:** Jesús Ignacio Alvarez Briceño  
 **Carné:** FI22028012
