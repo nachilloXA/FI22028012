@@ -11,14 +11,13 @@ Este programa toma un número natural como argumento y muestra su inverso utiliz
 $ java Inverso 123
 123 → 321
 
-```bash
 
-## Fuentes consultadas
+# Fuentes consultadas
 - [https://docs.oracle.com/](https://docs.oracle.com/)
 - [https://www.geeksforgeeks.org/recursion-in-java/](https://www.geeksforgeeks.org/recursion-in-java/)
 - [https://www.w3schools.com/java/](https://www.w3schools.com/java/)
 
-## Prompts usados con IA
+# Prompts usados con IA
 - “Escribe un programa en Java que invierta un número usando recursividad, cociente y residuo”
 - “Explícame cómo crear carpeta PP1 en GitHub”
 - “Cómo excluir archivos .class con gitignore”
@@ -26,7 +25,7 @@ $ java Inverso 123
 IA utilizada: **ChatGPT (GPT-5)**  
 URL de la conversación: *(puedes pegar el link de esta conversación si quieres)*
 
-## Preguntas
+# Preguntas
 
 ### 1. ¿Es posible implementar una solución equivalente pero de comportamiento iterativo?
 Sí. Se puede hacer con un ciclo `while`, extrayendo el residuo y multiplicando por 10 en cada iteración para construir el número inverso.
