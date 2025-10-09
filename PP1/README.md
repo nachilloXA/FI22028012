@@ -8,9 +8,10 @@ Este programa toma un número natural como argumento y muestra su inverso utiliz
 
 ## Ejemplo de ejecución
 
-```bash
 $ java Inverso 123
 123 → 321
+
+```bash
 
 ## Fuentes consultadas
 - [https://docs.oracle.com/](https://docs.oracle.com/)
