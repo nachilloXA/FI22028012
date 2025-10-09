@@ -23,7 +23,7 @@ $ java Inverso 123
 - “Cómo excluir archivos .class con gitignore”
 
 IA utilizada: **ChatGPT (GPT-5)**  
-URL de la conversación: *(puedes pegar el link de esta conversación si quieres)*
+
 
 # Preguntas
 
