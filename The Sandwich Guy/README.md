@@ -20,25 +20,21 @@ El repositorio contiene todo el código fuente del proyecto (archivos `.java`) y
 
 ## Estructura del proyecto
 
- src/
-    
-    Carta.java
-    
-    Mazo.java
-    
-    Mano.java
-    
-    Caja.java
-    
-    GameController.java
-    
-    MainView.java
-    
-    Main.java
- 
- .gitignore
- 
- README.md
+```
+The Sandwich Guy/
+├── controller/
+│   ├── GameController.java
+├── model/
+│   ├── Caja.java
+│   ├── Carta.java
+│   ├── Mano.java
+│   ├── Mazo.java
+├── view/
+│   ├── MainView.java
+├── .gitignore
+├── Main.java
+├── README.md
+```
 
 ---
 
@@ -57,24 +53,51 @@ El repositorio contiene todo el código fuente del proyecto (archivos `.java`) y
 
 ---
 
-## ⚙️ Instructivo
+## ⚙️ Instalación y Ejecución
 
-### 🔹 Instalación
-1. Asegúrese de tener instalado **Java Development Kit (JDK) versión 21 LTS**  
-2. No se requieren librerías externas; se utiliza únicamente la **biblioteca estándar de Java (Swing/AWT)**.  
-3. Clonar el repositorio en su entorno local:
-   ```
-   git clone https://github.com/usuario/proyecto-cartas.git
-Abrir el proyecto con su IDE preferido (IntelliJ, NetBeans, etc.).
+## 📦 Requisitos
 
-🔹 Compilación
-Desde la terminal, dentro del directorio del proyecto:
+- **Java JDK 21**  
 
-javac -d bin src/*.java
-Esto generará los archivos .class en la carpeta /bin, excluidos del repositorio.
+---
 
-🔹 Ejecución
-Ejecute el programa principal desde la terminal o el IDE:
+### 1️⃣ Clonar el Repositorio
 
-java -cp bin Main
-Si la aplicación utiliza interfaz gráfica, asegúrese de ejecutar en entorno gráfico (no en consola pura).
+Abre una terminal o línea de comandos y ejecuta:
+
+```bash
+git clone https://github.com/nachilloXA/FI22028012.git
+```
+
+---
+
+### 2️⃣ Navegar al Directorio del Proyecto
+
+Una vez clonado, ingresa a la carpeta del proyecto:
+
+```bash
+cd FI22028012
+cd "The Sandwich Guy"
+```
+
+---
+
+### 3️⃣ Compilar y Ejecutar desde la Terminal
+
+#### 🔹 Compilar
+Compila todos los archivos fuente `.java` para generar los archivos `.class`:
+
+```bash
+javac *.java
+```
+
+#### 🔹 Ejecutar
+Ejecuta la clase principal del programa (`Main.java`):
+
+```bash
+java Main
+```
+
+
+
+

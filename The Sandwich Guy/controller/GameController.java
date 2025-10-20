@@ -59,7 +59,7 @@ public class GameController {
         }
         Carta robada = mazo.sacarCarta();
         if( mano.estaLlena()) {
-            JOptionPane.showMessageDialog(null, "La mano está llena. No puedes robar más cartas.");
+            JOptionPane.showMessageDialog(null, "La mano está llena. No puedes hagarrar más cartas.");
         }
         if (robada != null && !mano.estaLlena()) {
             mostrarMazo();
@@ -72,4 +72,6 @@ public class GameController {
     public void validarSandwich(){JOptionPane.showMessageDialog(null, "Funcionalidad de validación no implementada aún.");}
     public void descartarCartaSeleccionada(){JOptionPane.showMessageDialog(null, "Funcionalidad de descarte no implementada aún.");}
     public void cargarPartida() { JOptionPane.showMessageDialog(null, "Funcionalidad de carga no implementada aún."); }
+    public void guardarPartida() { JOptionPane.showMessageDialog(null, "Funcionalidad de guardado no implementada aún."); }
+    public void ordenarMano() { JOptionPane.showMessageDialog(null, "Funcionalidad de ordenación no implementada aún.");}
 }
