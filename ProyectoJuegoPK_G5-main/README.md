@@ -21,14 +21,23 @@ El repositorio contiene todo el código fuente del proyecto (archivos `.java`) y
 ## Estructura del proyecto
 
  src/
+    
     Carta.java
+    
     Mazo.java
+    
     Mano.java
+    
     Caja.java
+    
     GameController.java
+    
     MainView.java
+    
     Main.java
+ 
  .gitignore
+ 
  README.md
 
 ---
