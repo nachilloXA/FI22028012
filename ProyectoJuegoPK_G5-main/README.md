@@ -20,21 +20,21 @@ El repositorio contiene todo el código fuente del proyecto (archivos `.java`) y
 
 ## Estructura del proyecto
 
-├── src/
-│ ├── Carta.java
-│ ├── Mazo.java
-│ ├── Mano.java
-│ ├── Caja.java
-│ ├── GameController.java
-│ ├── MainView.java
-│ └── Main.java
-├── .gitignore
-└── README.md
+ src/
+    Carta.java
+    Mazo.java
+    Mano.java
+    Caja.java
+    GameController.java
+    MainView.java
+    Main.java
+ .gitignore
+ README.md
 
 ---
 
 ## Editores o IDEs utilizados
-- [ ] Visual Studio Code 
+- Visual Studio Code 
 
 ---
 
@@ -54,7 +54,7 @@ El repositorio contiene todo el código fuente del proyecto (archivos `.java`) y
 1. Asegúrese de tener instalado **Java Development Kit (JDK) versión 21 LTS**  
 2. No se requieren librerías externas; se utiliza únicamente la **biblioteca estándar de Java (Swing/AWT)**.  
 3. Clonar el repositorio en su entorno local:
-   ```bash
+   ```
    git clone https://github.com/usuario/proyecto-cartas.git
 Abrir el proyecto con su IDE preferido (IntelliJ, NetBeans, etc.).
 
