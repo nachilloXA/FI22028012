@@ -14,7 +14,7 @@ public class MainView extends JFrame {
 
     public MainView(GameController controller) {
         this.controller = controller;
-        setTitle("PK-G5");
+        setTitle("♥ ♦ ♠ ♣ - The Sandwich Guy - ♥ ♦ ♠ ♣");
         setSize(900, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
