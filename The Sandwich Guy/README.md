@@ -4,9 +4,9 @@
 | Nombre completo | Carné | Usuario de GitHub | Correo de Git |
 |------------------|-------|-------------------|----------------|
 | [Jesus Ignacio Alvarez Briceño] | [FI22028012] | [@nachilloXA] | [jalvarez10326@ufide.ac.cr] |
-| [Emanuel Lopez Escobar] | [FI24044110] | [@usuarioGit2] | [elopez10708@ufide.ac.cr] |
-| [Anthony Gomez Garcia] | [FI24039489] | [@usuarioGit3] | [agomez40375@ufide.ac.cr] |
-| [Sebastian Vargas Oviedo] | [FH20008393] | [@usuarioGit3] | [svargas10514@ufide.ac.cr] |
+| [Emanuel Lopez Escobar] | [FI24044110] | [@ele22] | [elopez10708@ufide.ac.cr] |
+| [Anthony Gomez Garcia] | [FI24039489] | [@Paycr21] | [agomez40375@ufide.ac.cr] |
+| [Sebastian Vargas Oviedo] | [FH20008393] | [@svargasvo2704] | [svargas10514@ufide.ac.cr] |
 
 ---
 
