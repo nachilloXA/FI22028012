@@ -12,10 +12,10 @@
 ## Estructura del repositorio
 ```
 PP3/
- ├── ListInterface.java
- ├── ListDoublyCircular.java
- ├── NodeDoubly.java
  ├── .gitignore
+ ├── ListDoublyCircular.java
+ ├── ListInterface.java
+ ├── NodeDoubly.java
  └── README.md
 ```
 
