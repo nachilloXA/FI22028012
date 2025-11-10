@@ -1,10 +1,18 @@
 package view;
 
-import javax.swing.*;
-import java.awt.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.LayoutManager;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Flow; // No es necesario Flow, ya que estás usando java.awt.FlowLayout
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import controller.GameController;
 import model.Carta;
@@ -14,6 +22,7 @@ public class MainView extends JFrame {
     private final JPanel cajaPanel, manoPanel, mazoPanel, pozoPanel;
     private final JPanel manoAccionPanel, manoCartasPanel; 
     private final GameController controller;
+    private final List<Carta> cartasSeleccionadas = new ArrayList<>();
 
     public MainView(GameController controller) {
         this.controller = controller;
@@ -83,7 +92,7 @@ public class MainView extends JFrame {
         nuevaPartidaBtn.addActionListener(e -> controller.crearPartida());
         cargarPartidaBtn.addActionListener(e -> controller.cargarPartida());
         obtenerCartaBtn.addActionListener(e -> controller.obtenerCarta());
-        descartarCartaBtn.addActionListener(e -> controller.descartarCartaSeleccionada());
+        descartarCartaBtn.addActionListener(e -> controller.descartarCartaSeleccionada(getPrimeraSeleccionada()));
         validarSandwichBtn.addActionListener(e -> controller.validarSandwich());
         ordenarBtn.addActionListener(e -> controller.ordenarMano());
         guardarBtn.addActionListener(e -> controller.guardarPartida());
@@ -101,14 +110,55 @@ public class MainView extends JFrame {
         manoCartasPanel.removeAll();
         for (Carta c : cartas) {
             JButton cartaBtn = new JButton(c.toString());
+            if (cartasSeleccionadas.contains(c)) {
+                cartaBtn.setBackground(Color.decode("#0a0a5c")); 
+                cartaBtn.setForeground(Color.WHITE);             
+            } else {
+                cartaBtn.setBackground(null);
+                cartaBtn.setForeground(Color.BLACK);
+            }
+            cartaBtn.addActionListener(e -> toogleCartaSeleccionada(c, cartaBtn) );
             manoCartasPanel.add(cartaBtn);
         }
         manoCartasPanel.revalidate();
         manoCartasPanel.repaint();
     }
 
+    public void toogleCartaSeleccionada(Carta carta, JButton boton) {
+        if (cartasSeleccionadas.contains(carta)) {
+            cartasSeleccionadas.remove(carta);
+            boton.setBackground(null); // Deseleccionar
+            boton.setForeground(Color.BLACK);
+            boton.repaint();
+        } else if (cartasSeleccionadas.size() < 3) { // podremos graduar el maximo de cartas seleccionadas
+            cartasSeleccionadas.add(carta);
+            boton.setBackground(Color.decode("#0a0a5c")); // Seleccionar
+            boton.setForeground(Color.WHITE);
+        }
+    }
+    
+
+    private Carta getPrimeraSeleccionada() {
+        return cartasSeleccionadas.isEmpty() ? null : cartasSeleccionadas.get(0);
+    }
+
+    public void limpiarSeleccion(Carta c) {
+        cartasSeleccionadas.remove(c);
+        System.out.println("Limpiando selección de la carta: " + cartasSeleccionadas);
+        
+    }
+
+    public void limpiarSeleccion() {
+        cartasSeleccionadas.clear();
+        for (Component comp : manoPanel.getComponents()) {
+            if (comp instanceof JButton) comp.setBackground(null);
+        }
+    }
+
     // --- Getters ---
     public JPanel getCajaPanel() { return cajaPanel; }
     public JPanel getManoPanel() { return manoPanel; } 
     public JPanel getMazoPanel() { return mazoPanel; }
+    public JPanel getPozoPanel() { return pozoPanel; }
+
 }
