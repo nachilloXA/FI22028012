@@ -1,6 +1,5 @@
 package model;
-
-public class Carta {
+public class Carta  {
     private final String palo;
     private final String valor;
     private final String color;

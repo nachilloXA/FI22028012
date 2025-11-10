@@ -144,7 +144,6 @@ public class MainView extends JFrame {
 
     public void limpiarSeleccion(Carta c) {
         cartasSeleccionadas.remove(c);
-        System.out.println("Limpiando selección de la carta: " + cartasSeleccionadas);
         
     }
 

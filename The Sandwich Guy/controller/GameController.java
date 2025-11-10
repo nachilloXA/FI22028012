@@ -66,27 +66,31 @@ public class GameController {
     
 
     public void obtenerCarta() {
-        if (mazo == null || mazo.estaVacio()) {
-            JOptionPane.showMessageDialog(null, "El mazo está vacío.");
-            return;
-        }
-        
-        if( mano.estaLlena()) {
-            JOptionPane.showMessageDialog(null, "La mano está llena. No puedes hagarrar más cartas.");
-            return;
-        }
-        Carta robada = mazo.sacarCarta();
-        if (robada != null && !mano.estaLlena()) {
-            mostrarMazo();
-            mano.agregarCarta(robada);
-            mostrarMano();
-            return;
+        try {
+            if (mazo == null || mazo.estaVacio()) {
+                JOptionPane.showMessageDialog(null, "El mazo está vacío.");
+                return;
+            }
+            
+            if( mano.estaLlena()) {
+                JOptionPane.showMessageDialog(null, "La mano está llena. No puedes hagarrar más cartas.");
+                return;
+            }
+            Carta robada = mazo.sacarCarta();
+            if (robada != null && !mano.estaLlena()) {
+                mostrarMazo();
+                mano.agregarCarta(robada);
+                mostrarMano();
+                return;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al obtener carta: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
         
     }
 
     public void descartarCartaSeleccionada(Carta c){
-        if(c ==null){
+        try{if(c ==null){
             JOptionPane.showMessageDialog(null, "No has seleccionado ninguna carta para descartar.");
             return;
         }
@@ -95,11 +99,21 @@ public class GameController {
         view.limpiarSeleccion(c);
         mostrarMano();
         mostrarPozo();
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error al descartar la carta: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
 }
 
     public void validarSandwich(){JOptionPane.showMessageDialog(null, "Funcionalidad de validación no implementada aún.");}
    
     public void cargarPartida() { JOptionPane.showMessageDialog(null, "Funcionalidad de carga no implementada aún."); }
     public void guardarPartida() { JOptionPane.showMessageDialog(null, "Funcionalidad de guardado no implementada aún."); }
-    public void ordenarMano() { JOptionPane.showMessageDialog(null, "Funcionalidad de ordenación no implementada aún.");}
+    public void ordenarMano() { 
+        try {
+            mano.ordernarCartas();
+            mostrarMano();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al ordenar la mano: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 }

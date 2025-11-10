@@ -11,4 +11,10 @@ public class Mano {
     public void agregarCarta(Carta c) { if (cartas.size() < 8) cartas.add(c); }
     public List<Carta> getCartas() { return cartas; }
     public void removerCarta(Carta c) { cartas.remove(c); }
+    public void ordernarCartas() {
+        cartas.sort((c1, c2) -> {
+            int valorComp = Integer.compare(c1.getNumero(), c2.getNumero());
+            return valorComp != 0 ? valorComp : c1.getPalo().compareTo(c2.getPalo());
+        });
+    }
 }
