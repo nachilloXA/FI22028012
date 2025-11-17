@@ -33,6 +33,6 @@ PP4/
 
 ## Respuestas
 
-Primeramente me proporciona los snippets de codigo para cada método, luego de esto me proporciona una breve explicación de cada metodo y donde colocarlos correctamente sin modificar el archivo base. 
+Primeramente me proporciona los snippets de codigo para cada método, luego de esto me proporciona una breve explicación de cada metodo y donde colocarlos correctamente sin modificar las demas partes del archivo base. 
 
 ---
