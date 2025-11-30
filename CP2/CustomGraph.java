@@ -19,6 +19,11 @@ public class CustomGraph {
         int tgt = Arrays.binarySearch(_chars, target);
         
         // Actualizar
+        // Implementación apoyada por ChatGPT (modelo GPT-5.1 Thinking).
+        // Segun la implementacion si ambos caracteres existen en el arreglo se incrementa la celda correspondiente
+        if (src >= 0 && tgt >= 0) {
+            _matrix[src][tgt] = _matrix[src][tgt] + 1;
+        }
     }
 
     public String getMatrix() {
